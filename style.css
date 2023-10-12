@@ -1,0 +1,204 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: roboto-reg;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+:root {
+/* colors */
+
+/*primary */
+--tomato: #ff6257;
+
+/* Neutral */
+--dark-slate-grey: #242742;
+--charcoal-grey: #36384e;
+--grey: #9294a0;
+--white: #ffffff;
+}
+
+body {
+    font-family: roboto-reg;
+    background-color: var(--charcoal-grey);
+}
+#hidden{
+    display: none;
+}
+
+/* main container */
+main{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+/* signup form */
+.card{
+    background-color: var(--white);
+    display: flex;
+    width: 700px;
+    padding: .8rem;
+    border-radius: 10px;
+    box-shadow: 4px 8px 15px 0px var(--dark-slate-grey);
+}
+img{
+    width: 100%;
+}
+
+.card-news_letter{
+    padding: 1rem;
+}
+h1{
+    font-size: 2.5rem;
+    color: var(--dark-slate-grey);
+    font-family: roboto-bold;
+    padding: 1.5rem 0 1rem .5rem;
+}
+p{
+    font-size: .9rem;
+    color: var(--grey);
+    padding: 0 0 1.5rem .5rem;
+}
+.card-news_letter ul{
+    list-style-image: url(./assets/images/icon-list.svg);
+    padding: 0 0 1.5rem 2rem;
+}
+.card-news_letter ul li{
+    font-size: .8rem;
+    color: var(--grey);
+    padding: 0 0 .5rem .5rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.labels{
+    display: flex;
+    justify-content: space-between;
+}
+label{    
+    font-size: .7rem;
+    color: var(--dark-slate-grey);
+    font-family: roboto-bold;
+    padding: 0 0 .8rem .5rem;
+}
+input{
+    margin: 0 1rem 1.5rem .5rem;
+    padding: 1rem 0 1rem 1.5rem;
+    border-radius: .3rem;
+    border: 1px solid var(--grey);
+    outline: none;
+}
+button {
+    margin: 0 1rem .8rem .5rem;
+    padding: .8rem 0 .8rem 0rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(60deg, var(--tomato)60%, #ec672d);
+    transition: all 1s;
+    box-shadow: 0px 4px 15px 0px var(--tomato);
+
+}
+.textArea{
+    font-size: .7rem;
+    color: var(--tomato);
+    padding-right: 1rem;
+}
+/* sign up end */
+
+/* success message */
+.successful-msg{
+    background-color: var(--white);
+    width: 23rem;
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 4px 8px 15px 0px var(--dark-slate-grey);
+}
+.svg{
+    padding-left: .5rem;
+}
+.successful-msg h1{
+    font-size: 2.7rem;
+}
+.des{
+    font-size: .8rem;
+}
+.des span{
+    font-family: roboto-bold;
+    color: var(--dark-slate-grey);
+}
+.successful-btn{
+    width: 100%;
+}
+/* success message ends */
+
+/* attribution */
+.attribution { 
+    font-size: 15px; 
+    text-align: center;  
+    position: fixed; 
+    bottom: 10px; 
+    left: 5px;
+}
+.attribution a { 
+    color: #fff; 
+    text-decoration: none;
+}
+.attribution a span {
+    color: tomato;
+}
+@media  screen and (max-width: 768px){
+    /* signup */
+    .card{
+        flex-direction: column-reverse;
+        justify-content: start;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 0;
+    }
+    img{
+        width: 100%;
+        content: url(/assets/images/illustration-sign-up-mobile.svg);
+    }
+    /* sign up ends */
+
+    /* success message */
+    .successful-msg{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .svg{
+        height: 50px;
+        width: 50px;
+        margin-top: 5rem;
+    }
+    .des{
+        font-size: 1rem;
+        color: var(--dark-slate-grey);
+        margin-bottom: 8.5rem;
+        line-height: 1.5;
+    }
+    .des span{
+        font-family: roboto-bold;
+    }
+    .attribution { 
+        display: none;
+    }
+}
